@@ -1,0 +1,11 @@
+@mixin message-bubble {
+  max-width: 70%;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

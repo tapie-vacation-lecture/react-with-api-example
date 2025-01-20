@@ -1,0 +1,98 @@
+@use 'variables' as vars;
+@use 'mixins' as mixins;
+@use "sass:color";
+
+.container {
+  width: 70vh;
+  height: 600px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  @include mixins.flex-column;
+}
+
+.header {
+  padding: 20px;
+  background-color: vars.$color-primary;
+  color: white;
+  border-radius: 12px 12px 0 0;
+
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 20px;
+  @include mixins.flex-column;
+}
+
+.userMessage {
+  composes: message;
+  align-items: flex-end;
+}
+
+.aiMessage {
+  composes: message;
+  align-items: flex-start;
+}
+
+.messageContent {
+  @include mixins.message-bubble;
+}
+
+.userMessageContent {
+  composes: messageContent;
+  background-color: vars.$color-primary;
+  color: white;
+  border-radius: 20px 20px 4px 20px;
+}
+
+.aiMessageContent {
+  composes: messageContent;
+  background-color: vars.$color-background;
+  color: vars.$color-text;
+  border-radius: 20px 20px 20px 4px;
+}
+
+.inputContainer {
+  padding: 20px;
+  border-top: 1px solid vars.$color-border;
+  display: flex;
+  gap: 10px;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid vars.$color-border;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  outline: none;
+
+  &:focus {
+    border-color: vars.$color-primary;
+  }
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: vars.$color-primary;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: color.scale(vars.$color-primary, $lightness: -10%);
+  }
+}
