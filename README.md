@@ -5,6 +5,9 @@ axios 라이브러리와 API를 사용해서 간단한 프로젝트를 제작하
 ## AI 채팅 웹사이트
 AI와 자유롭게 채팅할 수 있는 웹사이트입니다. 모르는 문제를 해결하거나 자료 검색을 할 수 있습니다.
 
+<img width="1369" alt="image" src="https://github.com/user-attachments/assets/7c2ecde4-b392-48aa-8f54-15c3cd255ba2" />
+
+
 ## 내가 사용한 API
 [OpenAI: Chat Completions](https://platform.openai.com/docs/api-reference/chat/create)  
 OpenAI의 Chat Completions API를 사용하였습니다.  
